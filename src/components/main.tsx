@@ -7,11 +7,11 @@ export default function Main({ children }: { children: React.ReactNode }) {
       "
     >
       {children}
-      <section>
+      <div>
         <div className="flex flex-col items-center justify-center">
           <div className="home_center"></div>
         </div>
-      </section>
+      </div>
     </main>
   )
 }

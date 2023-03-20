@@ -16,7 +16,7 @@
     @apply text-4xl font-semibold; /* 63px */
   }
   p {
-    @apply text-xl font-normal; /* 16px */
+    @apply text-lg font-normal; /* 16px */
   }
 }
 
