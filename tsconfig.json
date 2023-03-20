@@ -18,6 +18,12 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/graphql/news.query.ts", "src/graphql/company.query.ts"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "src/graphql/news.query.ts",
+    "src/graphql/company.query.ts"
+  ],
   "exclude": ["node_modules"]
 }

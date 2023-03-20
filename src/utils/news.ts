@@ -7,7 +7,7 @@ export async function getNews() {
     variables: {
       limit: 10,
       offset: 0,
-     },
+    },
   })
 
   return data.data.histories

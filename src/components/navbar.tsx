@@ -21,10 +21,7 @@ export default function Navbar() {
       </Link>
       <ul className="flex">
         {links.map((link) => (
-          <li
-            className="ml-4 uppercase font-semibold text-lg"
-            key={link.name}
-          >
+          <li className="ml-4 uppercase font-semibold text-lg" key={link.name}>
             <Link href={link.href}>{link.name}</Link>
           </li>
         ))}
