@@ -7,13 +7,13 @@
     @apply bg-black text-slate-300;
   }
   h1 {
-    @apply text-6xl font-semibold mb-5; /* 60px */
+    @apply text-4xl font-semibold mb-5; /* 60px */
   }
   h2 {
-    @apply text-5xl font-semibold; /* 48px */
+    @apply text-3xl font-semibold; /* 48px */
   }
   h3 {
-    @apply text-4xl font-semibold; /* 63px */
+    @apply text-2xl font-semibold; /* 63px */
   }
   p {
     @apply text-lg font-normal; /* 16px */
@@ -23,14 +23,14 @@
 @layer components {
 }
 
-.home_center::after, .home_center::before {
+.gradients::after, .gradients::before {
   content: "";
   filter: blur(45px);
   position: absolute;
   transform: translateZ(0);
 }
 
-.home_center::after {
+.gradients::after {
   background: linear-gradient(
     to bottom right,rgba(42, 138, 246, 1),rgba(42, 138, 246, 1),rgba(1,65,255,.3));
   opacity: 0.2;
@@ -40,13 +40,21 @@
   width: 280px;
 }
 
-.home_center::before {
+.gradients::before {
   background: radial-gradient(
     rgba(1,65,255,.4),rgba(168, 83, 186, 1));
   opacity: 0.4;
   height: 200px;
   right: -10%;
   width: 240px;
-  z-index: -1;
+  z-index: 20;
 }
 
+.company_bg {
+  background-image: url("/images/capabilities_satellite_spacex.gif");
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+}

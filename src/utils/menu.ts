@@ -1,11 +1,11 @@
 export const links = [
   {
-    name: 'Rockets',
-    href: '/rockets',
-  },
-  {
     name: 'News',
     href: '/news',
+  },
+  {
+    name: 'Rockets',
+    href: '/rockets',
   },
   {
     name: 'Company',
