@@ -2,7 +2,7 @@ import { gql } from '@apollo/client'
 
 export const NEWS = gql`
   query News {
-    histories(limit: 10, offset: 0) {
+    histories(limit: 8, offset: 0) {
       id
       details
       event_date_unix

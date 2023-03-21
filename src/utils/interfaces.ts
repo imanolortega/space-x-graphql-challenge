@@ -32,3 +32,26 @@ export interface NewsProps {
   }
   title: string
 }
+
+export interface CardProps {
+  href: string
+  title: string
+  details: string
+  date: string
+}
+
+export interface PagerProps {
+  currentPageNumber: number
+  pageSize: number
+  path: string
+  pathNumberPage: number
+  totalCount: number
+}
+
+export interface PageElementProps {
+  currentPageNumber?: number
+  icon?: any
+  iconClassName?: string
+  number?: number
+  path?: string
+}

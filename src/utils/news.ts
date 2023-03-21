@@ -1,12 +1,13 @@
 import { NEWS } from '@/graphql/news.query'
 import client from './apolloClient'
 
-export async function getNews() {
+export async function getNews(
+  { limit, offset }: { limit: number, offset: number }) {
   const data = await client.query({
     query: NEWS,
     variables: {
-      limit: 10,
-      offset: 0,
+      limit: limit,
+      offset: offset,
     },
   })
 

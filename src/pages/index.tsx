@@ -13,7 +13,6 @@ export default function Home() {
         </p>
         <div></div>
       </section>
-      <div className="gradients"></div>
     </Layout>
   )
 }
