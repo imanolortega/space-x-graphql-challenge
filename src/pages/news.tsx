@@ -4,14 +4,22 @@ import { NewsProps } from '@/utils/interfaces'
 import Card from '@/components/card'
 import Layout from '@/components/layout'
 import moment from 'moment'
+import Pager from '@/components/pager'
 const ARTICLES_PER_PAGE = 10
 
-export default function NewsPage({ data }: { data: NewsProps[] }) {
+export default function NewsPage({
+  data,
+  page,
+}: {
+  data: NewsProps[]
+  page: number
+}) {
+  const currentPageNumber = page + 1
   return (
     <Layout title="News">
       <section>
         <h1 className="ml-2">News</h1>
-        <div className="grid grid-cols-4 gap-6">
+        <div className="grid grid-cols-4 gap-6 mb-6">
           {data.map(({ links, id, title, details, event_date_utc }) => (
             <Card
               href={links.article}
@@ -22,6 +30,15 @@ export default function NewsPage({ data }: { data: NewsProps[] }) {
             />
           ))}
         </div>
+        <div className="flex justify-center items-center">
+          <Pager
+            currentPageNumber={currentPageNumber}
+            pageSize={ARTICLES_PER_PAGE}
+            path="/news"
+            pathNumberPage={page}
+            totalCount={15}
+          />
+        </div>
       </section>
     </Layout>
   )
@@ -30,16 +47,14 @@ export default function NewsPage({ data }: { data: NewsProps[] }) {
 export const getServerSideProps: GetServerSideProps = async ({
   query,
 }: GetServerSidePropsContext) => {
-  const page = parseInt(query.page as string, 10) || 1
+  const page = parseInt(query.page as string)
   const offset = page * ARTICLES_PER_PAGE || 0
 
-  console.log('page', page)
-  console.log('offset', offset)
-
-  const data = await getNews({limit: ARTICLES_PER_PAGE, offset: offset})
+  const data = await getNews({ limit: ARTICLES_PER_PAGE, offset: offset })
   return {
     props: {
       data: data || [],
+      page: page,
     },
   }
 }

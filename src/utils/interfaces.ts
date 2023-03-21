@@ -49,9 +49,9 @@ export interface PagerProps {
 }
 
 export interface PageElementProps {
+  className?: string
+  children: React.ReactNode
   currentPageNumber?: number
-  icon?: any
-  iconClassName?: string
-  number?: number
+  number?: string | number
   path?: string
 }

@@ -1,20 +1,18 @@
 import { PageElementProps } from '@/utils/interfaces'
 import Link from 'next/link'
 
-export function PagerElement({
-  currentPageNumber,
-  icon,
-  iconClassName,
-  number,
-  path,
-}: PageElementProps) {
+export function PagerElement({ children, path }: PageElementProps) {
   const ElementContainer = path ? Link : 'div'
 
   return (
-    <ElementContainer href={path}>
-      <span className={`${number === currentPageNumber && 'active-element'}`}>
-        {number}
-      </span>
+    <ElementContainer
+      className="
+      h-8 w-8 mx-1 rounded
+      border border-gray-700
+      flex items-center justify-center"
+      href={path || '/'}
+    >
+      <span>{children}</span>
     </ElementContainer>
   )
 }

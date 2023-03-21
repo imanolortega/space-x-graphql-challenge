@@ -15,11 +15,11 @@ export function paginationRange({
   siblingCount, //The number of page buttons to be shown on each side of the current page
   currentPage,
 }: {
-  totalCount: number;
-  pageSize: number;
-  siblingCount: number;
-  currentPage: number;
-}): (number | string )[] {
+  totalCount: number
+  pageSize: number
+  siblingCount: number
+  currentPage: number
+}): (number | string)[] {
   const totalPageCount = Math.ceil(totalCount / pageSize)
 
   /*
@@ -43,10 +43,7 @@ export function paginationRange({
     they are within range 1 and totalPageCount
   */
   const leftSiblingIndex = Math.max(currentPage - siblingCount, 1)
-  const rightSiblingIndex = Math.min(
-    currentPage + siblingCount,
-    totalPageCount
-  )
+  const rightSiblingIndex = Math.min(currentPage + siblingCount, totalPageCount)
 
   /*
     We do not show dots just when there is just one page number to be
@@ -67,22 +64,21 @@ export function paginationRange({
     const leftRange = range(1, leftItemCount)
 
     return [...leftRange, DOTS, totalPageCount]
-  }
-
-  /*
+  } else if (shouldShowLeftDots && !shouldShowRightDots) {
+    /*
     Case 3: No right dots to show, but left dots to be shown
   */
-  else if (shouldShowLeftDots && !shouldShowRightDots) {
     const rightItemCount = 3 + 2 * siblingCount
-    const rightRange = range(totalPageCount - rightItemCount + 1, totalPageCount)
+    const rightRange = range(
+      totalPageCount - rightItemCount + 1,
+      totalPageCount,
+    )
 
     return [firstPageIndex, DOTS, ...rightRange]
-  }
-
-  /*
+  } else if (shouldShowLeftDots && shouldShowRightDots) {
+    /*
     Case 4: Both left and right dots to be shown
   */
-  else if (shouldShowLeftDots && shouldShowRightDots) {
     const middleRange = range(leftSiblingIndex, rightSiblingIndex)
 
     return [firstPageIndex, DOTS, ...middleRange, DOTS, lastPageIndex]

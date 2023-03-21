@@ -1,6 +1,8 @@
 import { PagerElement } from './pager-element'
 import { paginationRange } from '@/utils/pager'
 import { PagerProps } from '@/utils/interfaces'
+import ArrowLeft from '@/icons/arrow-left'
+import ArrowRight from '@/icons/arrow-right'
 
 export default function Pager({
   currentPageNumber,
@@ -28,32 +30,24 @@ export default function Pager({
   return (
     <div className="flex">
       {previewPage > -1 && (
-        <PagerElement
-          iconClassName="
-            inline-flex justify-center items-center
-            w-20 aspect-w-1 aspect-h-1
-            bg-slate-300 color-slate-900
-            "
-          path={previewPath}
-        />
+        <PagerElement path={previewPath}>
+          <ArrowLeft />
+        </PagerElement>
       )}
       {paginationElements?.map((element) => (
         <PagerElement
-          key={element}
           currentPageNumber={currentPageNumber}
+          key={element}
           number={element}
           path={element === 1 ? `${path}` : `${path}?page=${element - 1}`}
-        />
+        >
+          {element}
+        </PagerElement>
       ))}
       {currentPageNumber < lastElement && (
-        <PagerElement
-          iconClassName="
-          inline-flex justify-center items-center
-          w-20 aspect-w-1 aspect-h-1
-          bg-slate-300 color-slate-900
-          "
-          path={nextPath}
-        />
+        <PagerElement path={nextPath}>
+          <ArrowRight />
+        </PagerElement>
       )}
     </div>
   )
