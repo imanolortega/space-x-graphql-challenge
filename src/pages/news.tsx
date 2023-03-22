@@ -19,7 +19,7 @@ export default function NewsPage({
     <Layout title="News">
       <section>
         <h1 className="ml-2">News</h1>
-        <div className="grid grid-cols-4 gap-6 mb-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
           {data.map(({ links, id, title, details, event_date_utc }) => (
             <Card
               href={links.article}

@@ -8,7 +8,6 @@ export async function getNews({
   limit: number
   offset: number
 }) {
-  console.log('getNews', limit, offset)
   const data = await client.query({
     query: NEWS,
     variables: {

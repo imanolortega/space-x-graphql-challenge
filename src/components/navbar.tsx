@@ -1,6 +1,7 @@
 import { links } from '@/utils/menu'
 import Image from 'next/image'
 import Link from 'next/link'
+import MobileNabvar from './mobile-navbar'
 
 export default function Navbar() {
   return (
@@ -18,13 +19,14 @@ export default function Navbar() {
           height={50}
         />
       </Link>
-      <ul className="flex">
+      <ul className="hidden md:flex">
         {links.map((link) => (
           <li className="ml-4 uppercase font-semibold text-lg" key={link.name}>
             <Link href={link.href}>{link.name}</Link>
           </li>
         ))}
       </ul>
+      <MobileNabvar items={links} />
     </nav>
   )
 }

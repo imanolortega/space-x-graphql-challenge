@@ -36,9 +36,8 @@ export default function Pager({
       )}
       {paginationElements?.map((element) => (
         <PagerElement
-          currentPageNumber={currentPageNumber}
+          className={element === currentPageNumber ? 'bg-gray-700' : ''}
           key={element}
-          number={element}
           path={element === 1 ? `${path}` : `${path}?page=${element - 1}`}
         >
           {element}

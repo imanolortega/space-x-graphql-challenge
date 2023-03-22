@@ -61,6 +61,15 @@
   width: 100%;
 }
 
+.home_bg {
+  background-image: url("/images/mars_landing.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
+}
+
 .line-clamp {
   display: -webkit-box;
   -webkit-line-clamp: 3;

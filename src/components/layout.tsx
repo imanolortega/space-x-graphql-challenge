@@ -8,11 +8,11 @@ import PageHead from '@/components/head'
 import { Space_Grotesk } from 'next/font/google'
 const space = Space_Grotesk({ subsets: ['latin'] })
 
-export default function Layout({ children, title }: LayoutProps) {
+export default function Layout({ children, className, title }: LayoutProps) {
   return (
     <ClientOnly>
       <div
-        className={`${space.className} grid grid-rows-[auto,1fr,auto] h-screen w-screen`}
+        className={`${space.className} ${className} grid grid-rows-[auto,1fr,auto] h-screen w-screen`}
       >
         <PageHead title={title} />
         <Navbar />

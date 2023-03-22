@@ -5,7 +5,7 @@ export default function Footer() {
     <footer
       className="h-16 px-6 py-4
       flex justify-center items-center
-      border-t border-gray-800"
+      border-t border-gray-800 bg-black"
     >
       <div className="flex">
         {links.map((link) => (

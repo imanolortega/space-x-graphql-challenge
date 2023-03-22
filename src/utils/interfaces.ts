@@ -16,6 +16,7 @@ export interface CompanyProps {
 export interface LayoutProps {
   title: string
   children: React.ReactNode
+  className?: string
 }
 
 export interface NewsProps {
@@ -51,7 +52,5 @@ export interface PagerProps {
 export interface PageElementProps {
   className?: string
   children: React.ReactNode
-  currentPageNumber?: number
-  number?: string | number
   path?: string
 }
