@@ -5,7 +5,7 @@ import Link from 'next/link'
 import MobileMenu from './mobile-menu'
 
 export default function Navbar() {
-  const showElement = useShowElementOnScroll()
+  const showElement = useShowElementOnScroll({ offset: 35 })
   return (
     <nav
       className="

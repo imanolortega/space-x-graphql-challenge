@@ -59,3 +59,18 @@ export interface MenuItemProps {
   name: string
   href: string
 }
+
+export interface LaunchProps {
+  mission_name: string
+  details: string
+  id: string
+  launch_date_local: string
+  links: {
+    article_link: string
+  }
+  rocket: {
+    rocket: {
+      name: string
+    }
+  }
+}

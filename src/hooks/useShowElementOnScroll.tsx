@@ -1,11 +1,11 @@
 import { useState, useEffect } from 'react'
 
-export function useShowElementOnScroll() {
+export function useShowElementOnScroll({ offset }: { offset: number }) {
   const [showElement, setShowElement] = useState(true)
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.pageYOffset > 35) {
+      if (window.pageYOffset > offset) {
         setShowElement(false)
       } else {
         setShowElement(true)

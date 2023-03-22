@@ -4,8 +4,8 @@ export const links = [
     href: '/news',
   },
   {
-    name: 'Rockets',
-    href: '/rockets',
+    name: 'Launches',
+    href: '/launches',
   },
   {
     name: 'Company',
