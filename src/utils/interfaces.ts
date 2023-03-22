@@ -54,3 +54,8 @@ export interface PageElementProps {
   children: React.ReactNode
   path?: string
 }
+
+export interface MenuItemProps {
+  name: string
+  href: string
+}

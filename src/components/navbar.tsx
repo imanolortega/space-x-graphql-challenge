@@ -1,18 +1,21 @@
+import { useShowElementOnScroll } from '@/hooks/useShowElementOnScroll'
 import { links } from '@/utils/menu'
 import Image from 'next/image'
 import Link from 'next/link'
-import MobileNabvar from './mobile-navbar'
+import MobileMenu from './mobile-menu'
 
 export default function Navbar() {
+  const showElement = useShowElementOnScroll()
   return (
     <nav
-      className="h-16 px-6 py-4
+      className="
+      h-16 px-6 py-4
       flex justify-between items-center
       border-b border-gray-800"
     >
       <Link href="/">
         <Image
-          className="mb-2"
+          className="mb-2 z-50 relative"
           alt="SpaceX Logo"
           src="/images/spacex-white.png"
           width={200}
@@ -26,7 +29,7 @@ export default function Navbar() {
           </li>
         ))}
       </ul>
-      <MobileNabvar items={links} />
+      {showElement && <MobileMenu items={links} />}
     </nav>
   )
 }
