@@ -16,7 +16,7 @@ export default function MobileMenu({ items }: { items: MenuItemProps[] }) {
   return (
     <div className="md:hidden flex h-10 w-10 items-center justify-end">
       <button
-        className="fixed z-50"
+        className="z-50"
         onClick={() => setIsOpen(!isOpen)}
       >
         {isOpen ? <Close /> : <Menu />}

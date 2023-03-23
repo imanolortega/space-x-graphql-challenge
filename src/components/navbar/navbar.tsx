@@ -5,7 +5,6 @@ import Link from 'next/link'
 import MobileMenu from '../mobile-menu/mobile-menu'
 
 export default function Navbar() {
-  const showElement = useShowElementOnScroll({ offset: 35 })
   return (
     <nav
       className="
@@ -29,7 +28,7 @@ export default function Navbar() {
           </li>
         ))}
       </ul>
-      {showElement && <MobileMenu items={links} />}
+      <MobileMenu items={links} />
     </nav>
   )
 }
