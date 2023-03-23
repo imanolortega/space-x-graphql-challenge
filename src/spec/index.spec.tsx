@@ -5,10 +5,18 @@ describe('Home page', () => {
   it('renders the correct content', () => {
     render(<Home />)
 
-    expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent('Rediscover the Space')
-    expect(screen.getByText('SpaceX designs, manufactures and launches advanced rockets and spacecraft')).toBeInTheDocument()
+    expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent(
+      'Rediscover the Space',
+    )
+    expect(
+      screen.getByText(
+        'SpaceX designs, manufactures and launches advanced rockets and spacecraft',
+      ),
+    ).toBeInTheDocument()
     expect(screen.getByTestId('layout')).toHaveClass('home_bg')
-    expect(screen.getByTestId('layout')).toContainElement(screen.getByRole('heading', { level: 1 }))
+    expect(screen.getByTestId('layout')).toContainElement(
+      screen.getByRole('heading', { level: 1 }),
+    )
   })
 
   it('renders the Layout component', () => {

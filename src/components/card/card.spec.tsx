@@ -7,7 +7,7 @@ describe('Card', () => {
     const props: CardProps = {
       href: 'https://example.com',
       title: 'Example Title',
-      details: 'Example Details'
+      details: 'Example Details',
     }
     const { baseElement } = render(<Card {...props} />)
     expect(baseElement).toBeTruthy()
