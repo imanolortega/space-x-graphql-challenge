@@ -1,6 +1,6 @@
 import { CompanyProps } from '@/utils/interfaces'
 import { getCompany } from '@/utils/company'
-import Layout from '@/components/layout'
+import Layout from '@/components/layout/layout'
 
 export default function CompanyPage({ data }: { data: CompanyProps }) {
   return (
@@ -10,7 +10,7 @@ export default function CompanyPage({ data }: { data: CompanyProps }) {
           <h1>Company</h1>
           <p>{data.summary}</p>
           <br />
-          <p className="text-base">CEO & CTO: {data.ceo}</p>
+          <p className="text-base">CEO: {data.ceo}</p>
           <p className="text-base">COO: {data.coo}</p>
           <p className="text-base">Founded in {data.founded}</p>
           <p className="text-base">

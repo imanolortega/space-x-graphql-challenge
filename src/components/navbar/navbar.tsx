@@ -2,7 +2,7 @@ import { useShowElementOnScroll } from '@/hooks/useShowElementOnScroll'
 import { links } from '@/utils/menu'
 import Image from 'next/image'
 import Link from 'next/link'
-import MobileMenu from './mobile-menu'
+import MobileMenu from '../mobile-menu/mobile-menu'
 
 export default function Navbar() {
   const showElement = useShowElementOnScroll({ offset: 35 })

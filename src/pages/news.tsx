@@ -1,10 +1,10 @@
 import { getNews } from '@/utils/news'
 import { GetServerSideProps, GetServerSidePropsContext } from 'next'
 import { NewsProps } from '@/utils/interfaces'
-import Card from '@/components/card'
-import Layout from '@/components/layout'
+import Card from '@/components/card/card'
+import Layout from '@/components/layout/layout'
 import moment from 'moment'
-import Pager from '@/components/pager'
+import Pager from '@/components/pager/pager'
 const ARTICLES_PER_PAGE = 10
 
 export default function NewsPage({

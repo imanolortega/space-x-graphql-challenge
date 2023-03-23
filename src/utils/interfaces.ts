@@ -1,3 +1,5 @@
+import { Dispatch, SetStateAction } from "react"
+
 export interface CompanyProps {
   ceo: string
   coo: string
@@ -38,7 +40,8 @@ export interface CardProps {
   href: string
   title: string
   details: string
-  date: string
+  date?: string
+  extraDetails?: string
 }
 
 export interface PagerProps {
@@ -73,4 +76,9 @@ export interface LaunchProps {
       name: string
     }
   }
+}
+
+export interface Search {
+  searchTerm: string
+  setSearchTerm: Dispatch<SetStateAction<string>>
 }
