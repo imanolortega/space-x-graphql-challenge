@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <footer
       className="h-16 px-6 py-4
-      flex justify-center items-center
+      flex justify-center items-center z-10
       border-t border-gray-800 bg-black"
     >
       <div className="flex">

@@ -23,6 +23,9 @@
 }
 
 @layer components {
+  .page_title {
+    @apply ml-0 md:ml-2;
+  }
 }
 
 .gradients::after, .gradients::before {
@@ -61,13 +64,15 @@
   }
 }
 
-.company_bg {
-  background-image: url("/images/capabilities_satellite_spacex.gif");
-  background-size: contain;
-  background-position: center center;
-  background-repeat: no-repeat;
-  height: 100%;
-  width: 100%;
+@media (min-width: 768px) {
+  .company_bg {
+    background-image: url("/images/capabilities_satellite_spacex.gif");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+  }
 }
 
 .home_bg {
@@ -77,6 +82,23 @@
   background-repeat: no-repeat;
   height: 100vh;
   width: 100%;
+}
+
+.overlay {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* ajusta la opacidad del filtro aquí */
+}
+
+@media screen and (min-width: 768px) {
+  /* estilos para pantallas de escritorio */
+  .overlay {
+    display: none;
+  }
 }
 
 .line-clamp {

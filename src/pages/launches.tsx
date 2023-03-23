@@ -19,7 +19,7 @@ export default function LaunchesPage({ data }: { data: LaunchProps[] }) {
   return (
     <Layout title="Launches">
       <section>
-        <h1 className="ml-2">Launches</h1>
+        <h1 className="page_title">Launches</h1>
         <SearchBar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
           {filteredData.map(
