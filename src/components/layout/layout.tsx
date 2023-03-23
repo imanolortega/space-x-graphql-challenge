@@ -12,7 +12,7 @@ export default function Layout({ children, className, title }: LayoutProps) {
   return (
     <ClientOnly>
       <div
-        className={`${space.className} ${className} grid grid-rows-[auto,1fr,auto] h-screen w-screen`}
+        className={`${space.className} ${className} grid grid-rows-[auto,1fr,auto] h-screen w-screen overflow-x-hidden`}
         data-testid="layout"
       >
         <PageHead title={title} />
