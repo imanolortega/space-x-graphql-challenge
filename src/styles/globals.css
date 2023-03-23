@@ -25,7 +25,7 @@
 @layer components {
 }
 
-/* .gradients::after, .gradients::before {
+.gradients::after, .gradients::before {
   content: "";
   filter: blur(45px);
   position: absolute;
@@ -54,7 +54,12 @@
   z-index: 10;
 }
 
-*/
+@media (max-width: 768px) {
+  .gradients::before,
+  .gradients::after {
+    display: none;
+  }
+}
 
 .company_bg {
   background-image: url("/images/capabilities_satellite_spacex.gif");
