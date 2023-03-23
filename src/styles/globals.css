@@ -4,7 +4,9 @@
 
 @layer base {
   body {
-    @apply bg-black text-slate-300 overflow-x-hidden;
+    @apply bg-black text-slate-300
+            overflow-x-hidden
+            min-h-screen w-screen;
   }
   h1 {
     @apply text-4xl font-semibold mb-5; /* 60px */
