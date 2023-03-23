@@ -10,16 +10,18 @@ const space = Space_Grotesk({ subsets: ['latin'] })
 
 export default function Layout({ children, className, title }: LayoutProps) {
   return (
-    <ClientOnly>
-      <div
-        className={`${space.className} ${className} grid grid-rows-[auto,1fr,auto] h-screen w-screen overflow-x-hidden`}
-        data-testid="layout"
-      >
-        <PageHead title={title} />
-        <Navbar />
-        <Main>{children}</Main>
-        <Footer />
-      </div>
-    </ClientOnly>
+    <>
+      <PageHead title={title} />
+      <ClientOnly>
+        <div
+          className={`${space.className} ${className} grid grid-rows-[auto,1fr,auto] h-screen w-screen overflow-x-hidden`}
+          data-testid="layout"
+        >
+          <Navbar />
+          <Main>{children}</Main>
+          <Footer />
+        </div>
+      </ClientOnly>
+    </>
   )
 }
