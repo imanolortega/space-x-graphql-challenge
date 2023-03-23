@@ -17,7 +17,7 @@ export function useShowElementOnScroll({ offset }: { offset: number }) {
     return () => {
       window.removeEventListener('scroll', handleScroll)
     }
-  }, [])
+  }, [offset])
 
   return showElement
 }
