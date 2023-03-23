@@ -45,7 +45,7 @@ export default function Pager({
           {element}
         </PagerElement>
       ))}
-      {currentPageNumber < lastElement && (
+      {currentPageNumber < Number(lastElement) && (
         <PagerElement path={nextPath}>
           <ArrowRight />
         </PagerElement>
