@@ -20,7 +20,7 @@ const ClientOnly: FC<Props & HTMLAttributes<HTMLDivElement>> = ({
     return null
   }
 
-  return <div className='h-screen w-screen' {...delegated}>{children}</div>
+  return <div {...delegated}>{children}</div>
 }
 
 export default ClientOnly
