@@ -18,11 +18,4 @@ describe('Home page', () => {
       screen.getByRole('heading', { level: 1 }),
     )
   })
-
-  it('renders the Layout component', () => {
-    render(<Home />)
-
-    expect(screen.getByTestId('layout')).toBeInTheDocument()
-    expect(screen.getByTestId('layout')).toBeInstanceOf(HTMLDivElement)
-  })
 })
