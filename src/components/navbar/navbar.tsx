@@ -1,4 +1,3 @@
-import { useShowElementOnScroll } from '@/hooks/useShowElementOnScroll'
 import { links } from '@/utils/menu'
 import Image from 'next/image'
 import Link from 'next/link'
