@@ -18,7 +18,7 @@ export default function PageHead({ title }: { title: string }) {
       <meta property="og:url" content={meta.url} />
       <link rel="canonical" href={meta.url} />
       <meta property="og:type" content={meta.type} />
-      <meta property="og:site_name" content="Más Canales" />
+      <meta property="og:site_name" content="SpaceX" />
       <meta property="og:description" content={meta.description} />
       <meta property="og:title" content={`SpaceX | ${title}`} />
       <meta property="og:image" content={meta.image} />
