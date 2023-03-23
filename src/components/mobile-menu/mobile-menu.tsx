@@ -13,11 +13,16 @@ export default function MobileMenu({ items }: { items: MenuItemProps[] }) {
     ...items,
   ]
 
+  function toggleMenu() {
+    setIsOpen(!isOpen)
+    document.body.style.overflow = isOpen ? 'initial' : 'hidden'
+  }
+
   return (
     <div className="md:hidden flex h-10 w-10 items-center justify-end">
       <button
         className="z-50"
-        onClick={() => setIsOpen(!isOpen)}
+        onClick={() => toggleMenu()}
       >
         {isOpen ? <Close /> : <Menu />}
       </button>
