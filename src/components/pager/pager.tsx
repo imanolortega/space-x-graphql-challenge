@@ -28,7 +28,7 @@ export default function Pager({
     paginationElements && paginationElements[paginationElements?.length - 1]
 
   return (
-    <div className="flex">
+    <div className="flex" role="navigation">
       {previewPage > -1 && (
         <PagerElement testId="arrow-left" path={previewPath}>
           <ArrowLeft />

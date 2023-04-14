@@ -20,7 +20,7 @@ export default function MobileMenu({ items }: { items: MenuItemProps[] }) {
 
   return (
     <div className="md:hidden flex h-10 w-10 items-center justify-end">
-      <button className="z-50" onClick={() => toggleMenu()}>
+      <button data-testid="menu-button" className="z-50" onClick={() => toggleMenu()}>
         {isOpen ? <Close /> : <Menu />}
       </button>
       {isOpen && (

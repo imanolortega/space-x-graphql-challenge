@@ -38,6 +38,7 @@ export default function LaunchesPage({ data }: { data: LaunchProps[] }) {
                 details={details}
                 extraDetails={`Rocket: ${rocket.rocket.name}`}
                 date={moment(launch_date_local).format('D MMMM YYYY')}
+                role="article"
               />
             ),
           )}

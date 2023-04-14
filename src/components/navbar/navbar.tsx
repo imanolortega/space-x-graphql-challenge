@@ -10,6 +10,7 @@ export default function Navbar() {
       h-16 px-6 py-4
       flex justify-between items-center
       border-b border-gray-800"
+      role="navigation"
     >
       <Link href="/">
         <Image

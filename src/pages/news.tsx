@@ -27,6 +27,7 @@ export default function NewsPage({
               title={title}
               details={details}
               date={moment(event_date_utc).format('D MMMM YYYY')}
+              role="article"
             />
           ))}
         </div>
