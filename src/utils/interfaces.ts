@@ -56,6 +56,7 @@ export interface PageElementProps {
   className?: string
   children: React.ReactNode
   path?: string
+  testId?: string
 }
 
 export interface MenuItemProps {

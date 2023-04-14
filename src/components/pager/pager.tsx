@@ -30,7 +30,7 @@ export default function Pager({
   return (
     <div className="flex">
       {previewPage > -1 && (
-        <PagerElement path={previewPath}>
+        <PagerElement testId="arrow-left" path={previewPath}>
           <ArrowLeft />
         </PagerElement>
       )}
@@ -46,7 +46,7 @@ export default function Pager({
         </PagerElement>
       ))}
       {currentPageNumber < Number(lastElement) && (
-        <PagerElement path={nextPath}>
+        <PagerElement testId="arrow-right" path={nextPath}>
           <ArrowRight />
         </PagerElement>
       )}
